@@ -59,7 +59,9 @@ class WebSocketProtocol(websockets.WebSocketServerProtocol):
             ws_handler=self.ws_handler,
             ws_server=self.ws_server,
             extensions=[ServerPerMessageDeflateFactory()],
+	    max_size=self.config.websocket_max_message_size
         )
+
 
     def connection_made(self, transport):
         self.connections.add(self)

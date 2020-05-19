@@ -47,6 +47,7 @@ Options:
                                   $WEB_CONCURRENCY environment variable if
                                   available, or 1. Not valid with --reload.
 
+
   --loop [auto|asyncio|uvloop]    Event loop implementation.  [default: auto]
   --http [auto|h11|httptools]     HTTP protocol implementation.  [default:
                                   auto]
@@ -54,6 +55,9 @@ Options:
   --ws [auto|none|websockets|wsproto]
                                   WebSocket protocol implementation.
                                   [default: auto]
+
+  --ws-max-size INTEGER           WebSocket max size message in bytes
+                                  [default: 16777216]
 
   --lifespan [auto|on|off]        Lifespan implementation.  [default: auto]
   --interface [auto|asgi3|asgi2|wsgi]
@@ -112,6 +116,7 @@ Options:
                                   as a Name:Value pair
 
   --version                       Display the uvicorn version and exit.
+
   --app-dir TEXT                  Look for APP in the specified directory, by
                                   adding this to the PYTHONPATH. Defaults to
                                   the current working directory.  [default: .]
@@ -119,8 +124,10 @@ Options:
   --factory                       Treat APP as an application factory, i.e. a
                                   () -> <ASGI app> callable.  [default: False]
 
+
   --help                          Show this message and exit.
 ```
+
 
 See the [settings documentation](settings.md) for more details on the supported options for running uvicorn.
 

@@ -59,7 +59,8 @@ class WebSocketProtocol(websockets.WebSocketServerProtocol):
             ws_handler=self.ws_handler,
             ws_server=self.ws_server,
             extensions=[ServerPerMessageDeflateFactory()],
-	    max_size=self.config.websocket_max_message_size
+            max_size=self.config.ws_max_size,
+
         )
 
 

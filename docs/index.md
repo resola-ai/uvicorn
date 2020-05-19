@@ -125,6 +125,9 @@ Options:
                                   WebSocket protocol implementation.
                                   [default: auto]
 
+  --ws-max-size INTEGER           WebSocket max size message in bytes
+                                  [default: 16777216]
+
   --lifespan [auto|on|off]        Lifespan implementation.  [default: auto]
   --interface [auto|asgi3|asgi2|wsgi]
                                   Select ASGI3, ASGI2, or WSGI as the
@@ -182,6 +185,7 @@ Options:
                                   as a Name:Value pair
 
   --version                       Display the uvicorn version and exit.
+
   --app-dir TEXT                  Look for APP in the specified directory, by
                                   adding this to the PYTHONPATH. Defaults to
                                   the current working directory.  [default: .]

@@ -47,7 +47,6 @@ Options:
                                   $WEB_CONCURRENCY environment variable if
                                   available, or 1. Not valid with --reload.
 
-
   --loop [auto|asyncio|uvloop]    Event loop implementation.  [default: auto]
   --http [auto|h11|httptools]     HTTP protocol implementation.  [default:
                                   auto]
